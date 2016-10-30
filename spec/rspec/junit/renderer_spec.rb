@@ -39,12 +39,6 @@ describe RSpec::JUnit::Renderer do
         subject = described_class.new RSpec::JUnit::ExampleCollection.new([]), 123
         expect(subject.render).to match(/testsuites(.*)time="123"/)
       end
-
-      it 'renders the current timestamp' do
-        Timecop.freeze do |time|
-          expect(subject.render).to match(/testsuites(.*)timestamp="#{time.iso8601}"/)
-        end
-      end
     end
 
     describe 'each testsuite' do
