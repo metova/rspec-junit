@@ -1,3 +1,4 @@
+require 'rspec'
 require 'rspec/core/formatters'
 require 'rspec/junit/version'
 require 'rspec/junit/example_collection'
