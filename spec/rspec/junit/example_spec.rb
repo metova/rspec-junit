@@ -17,9 +17,9 @@ describe RSpec::JUnit::Example do
     end
   end
 
-  describe '#description' do
+  describe '#name' do
     it 'returns the full description of the example' do
-      expect(subject.description).to eq 'bar'
+      expect(subject.name).to eq 'bar'
     end
   end
 end
