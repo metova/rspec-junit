@@ -1,5 +1,18 @@
 sudo: false
 language: ruby
 rvm:
-  - 2.3.0
+- 2.0.0
+- 2.1.0
+- 2.2.3
+- 2.3.0
 before_install: gem install bundler -v 1.13.6
+cache: bundler
+deploy:
+  provider: rubygems
+  gem:
+    master: rspec-junit
+  on:
+    repo: metova/rspec-junit
+    branch: master
+  api_key:
+    secure: ni/sim1H2G1uBq6d0bcCgWIRobJ2mPpOYWAmXZDfOUgTzIiW6xWvw+rVAt8bYaO4mVMEpX7FobEYB+yWK6lAHkmaxY7a4IMae3bc3qA/wPQzvd5TObutfPQCNonZ9rrb7cH9sgfqTcXRgpZNbJ5AsUk6aa+71WYHJCZ+8m9rdUJ3wOXgMHtIKmk0m56cbFBz75KWDPxr+aHO6yF43lkoi6F2kctzfgKAsDqwmLZWjBCtC8amvpO7puzLI6sgfcmz6Lf8WDEbnGE7cINEN4Ttati3JJViVjQFTz+dhEBneFySUq/8sYtxxgYiXfQCq2/1uMXNg7n9e409kEoMH+w4etyFD0lSw9qtaqWbTp3BBwYeZK2ps3NKVyebGBFZzdSLpuE1lBDUoX18+g/iyhsGyaZlabmWhknqsnphp2wOGw6PpyrLFDGv7uFPnoWSveFBi4MjtnN+ag7XCH1lUD6cAtxbgz6rEAPYF9RRsPLjBsfgu6fsLV5kvHII42dDd1IBNZd+OUXtXYsRJY2oNPil8jwWDMkl39+Vyni2IOsiRpv2voh2JczF+UgAztv6A3AvZOBycCRzAdlApS13Ij/biqdDjse8w4QlsCk6N1XhUYV1U4TwmvyCfBshJWVnvbejUUcDrnbDc8avV+JPLnW0f9bg8XZ014yv9EJbKTjdkpw=
