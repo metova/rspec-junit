@@ -8,7 +8,7 @@ describe RSpec::JUnit::Renderer do
   let(:notification) do
     double({
       exception: double(:exception, message: 'Test', backtrace: ['Your shit is broken', 'For real']),
-      metadata: { example_group: { description: 'test' }, execution_result: double(run_time: 1) }
+      example: double(:example, metadata: { example_group: { description: 'test' }, execution_result: double(run_time: 1) })
     })
   end
 

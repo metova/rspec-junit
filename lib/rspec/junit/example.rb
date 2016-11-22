@@ -20,16 +20,21 @@ module RSpec
       end
 
       def name
-        @notification.metadata[:full_description]
+        metadata[:full_description]
       end
 
       def testsuite
-        @notification.metadata[:example_group][:description]
+        metadata[:example_group][:description]
       end
 
       def run_time
-        @notification.metadata[:execution_result].run_time
+        metadata[:execution_result].run_time
       end
+
+      private
+        def metadata
+          @_metadata ||= @notification.example.metadata
+        end
     end
   end
 end

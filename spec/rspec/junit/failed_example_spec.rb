@@ -2,7 +2,7 @@ describe RSpec::JUnit::FailedExample do
   subject { described_class.new notification }
 
   let(:notification) do
-    double :notification, exception: exception, metadata: { example_group: { description: 'foo' }, full_description: 'bar' }
+    double :notification, exception: exception, example: double(metadata: { example_group: { description: 'foo' }, full_description: 'bar' })
   end
 
   let(:exception) do

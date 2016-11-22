@@ -9,8 +9,8 @@ describe RSpec::JUnit::ExampleCollection do
 
   describe '#each_testsuite' do
     it 'yields each example by their testsuite' do
-      example1 = RSpec::JUnit::Example.new double(metadata: { example_group: { description: '1' } })
-      example2 = RSpec::JUnit::Example.new double(metadata: { example_group: { description: '2' } })
+      example1 = RSpec::JUnit::Example.new double(example: double(metadata: { example_group: { description: '1' } }))
+      example2 = RSpec::JUnit::Example.new double(example: double(metadata: { example_group: { description: '2' } }))
       subject << example1
       subject << example2
       results = []

@@ -8,7 +8,7 @@ describe RSpec::JUnit do
 
   describe 'RSpec hooks' do
     let(:notification) do
-      double :notification, metadata: { example_group: { description: 'test' } }
+      double :notification, example: double(:example, metadata: { example_group: { description: 'test' } })
     end
 
     describe '#example_passed' do

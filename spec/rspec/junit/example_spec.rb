@@ -2,7 +2,7 @@ describe RSpec::JUnit::Example do
   subject { described_class.new notification }
 
   let(:notification) do
-    double :notification, metadata: { example_group: { description: 'foo' }, full_description: 'bar' }
+    double :notification, example: double(metadata: { example_group: { description: 'foo' }, full_description: 'bar' })
   end
 
   it 'responds to status predicates properly' do
